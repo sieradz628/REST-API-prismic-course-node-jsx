@@ -2,7 +2,7 @@ const articleService = require('../services/articleService'); // there we will d
 
 const getAllArticle = async(req, res) => {
   const [article] = await Promise.all([
-    articleService.getArticle(req.params.pageNumber || 1),
+    articleService.getArticle(),
   ]);
   const context = { // preparing the context for our view
     article
